@@ -1,6 +1,6 @@
-import React from 'react';
+
 import { Outlet, NavLink } from 'react-router-dom';
-import { Home, Stethoscope, MapPin, Calendar, User, Info, MessageSquare } from 'lucide-react';
+import { Home, MapPin, User, Info, MessageSquare } from 'lucide-react';
 
 export default function AppLayout() {
   const desktopNavItems = [

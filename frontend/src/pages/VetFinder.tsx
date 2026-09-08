@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { MapPin, Search, Star, Clock, AlertTriangle, Phone } from 'lucide-react';
+import { MapPin, Search, Star, Clock, AlertTriangle } from 'lucide-react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 
 export default function VetFinder() {

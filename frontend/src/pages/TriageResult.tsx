@@ -1,5 +1,5 @@
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
-import { AlertCircle, AlertTriangle, CheckCircle, Info, ChevronRight, Stethoscope } from 'lucide-react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { AlertCircle, AlertTriangle, CheckCircle, Info, Stethoscope } from 'lucide-react';
 
 export default function TriageResult() {
   const location = useLocation();

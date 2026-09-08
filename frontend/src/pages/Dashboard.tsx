@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import { Calendar, MessageSquare, AlertCircle, CheckCircle, Info, Stethoscope, ChevronRight, Activity, Plus } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { Calendar, MessageSquare, Info, Stethoscope, ChevronRight, Plus } from 'lucide-react';
 
 export default function Dashboard() {
   const navigate = useNavigate();
@@ -42,15 +42,7 @@ export default function Dashboard() {
     fetchDashboardData();
   }, [navigate]);
 
-  const getUrgencyConfig = (level: string) => {
-    switch (level?.toLowerCase()) {
-      case 'low': return { icon: CheckCircle, color: 'text-green-600', bg: 'bg-green-50' };
-      case 'moderate': return { icon: Info, color: 'text-yellow-600', bg: 'bg-yellow-50' };
-      case 'high': return { icon: AlertCircle, color: 'text-orange-600', bg: 'bg-orange-50' };
-      case 'emergency': return { icon: AlertCircle, color: 'text-red-600', bg: 'bg-red-50' };
-      default: return { icon: Activity, color: 'text-slate-600', bg: 'bg-slate-50' };
-    }
-  };
+
 
   if (loading) {
     return <div className="p-8 text-center text-slate-500 animate-pulse">Loading dashboard...</div>;

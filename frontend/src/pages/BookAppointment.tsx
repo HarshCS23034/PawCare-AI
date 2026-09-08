@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ChevronLeft, Check, Calendar as CalendarIcon, Clock, Stethoscope, CheckCircle } from 'lucide-react';
+import { ChevronLeft, Check, Calendar as CalendarIcon, Stethoscope, CheckCircle, MapPin } from 'lucide-react';
 
 export default function BookAppointment() {
   const { clinicId } = useParams();
