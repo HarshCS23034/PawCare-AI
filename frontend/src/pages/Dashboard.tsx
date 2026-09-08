@@ -21,9 +21,9 @@ export default function Dashboard() {
         // Mock getting user from token or context, just setting a mock for now
         // Fetch actual user
         const [userRes, petsRes, apptRes] = await Promise.all([
-          fetch('http://localhost:8000/auth/me', { headers: { Authorization: `Bearer ${token}` } }),
-          fetch('http://localhost:8000/pets/', { headers: { Authorization: `Bearer ${token}` } }),
-          fetch('http://localhost:8000/appointments/', { headers: { Authorization: `Bearer ${token}` } })
+          fetch('https://pawcare-backend.onrender.com/auth/me', { headers: { Authorization: `Bearer ${token}` } }),
+          fetch('https://pawcare-backend.onrender.com/pets/', { headers: { Authorization: `Bearer ${token}` } }),
+          fetch('https://pawcare-backend.onrender.com/appointments/', { headers: { Authorization: `Bearer ${token}` } })
         ]);
         
         if (userRes.ok) {

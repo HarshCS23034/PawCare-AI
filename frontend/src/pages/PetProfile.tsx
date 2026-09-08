@@ -44,7 +44,7 @@ export default function PetProfile() {
         age: formData.age ? parseInt(formData.age) : null
       };
 
-      const res = await fetch('http://localhost:8000/pets/', {
+      const res = await fetch('https://pawcare-backend.onrender.com/pets/', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
