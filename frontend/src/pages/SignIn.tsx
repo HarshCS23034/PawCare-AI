@@ -16,7 +16,7 @@ export default function SignIn() {
 
     try {
       if (isSignUp) {
-        const res = await fetch('https://pawcare-backend.onrender.com/auth/signup', {
+        const res = await fetch('https://pawcare-backend-kpao.onrender.com/auth/signup', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email, password, full_name: fullName }),
@@ -33,7 +33,7 @@ export default function SignIn() {
         formData.append('username', email);
         formData.append('password', password);
         
-        const res = await fetch('https://pawcare-backend.onrender.com/token', {
+        const res = await fetch('https://pawcare-backend-kpao.onrender.com/token', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: formData,

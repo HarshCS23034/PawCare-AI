@@ -17,7 +17,7 @@ export default function VetFinder() {
     const fetchClinics = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await fetch(`https://pawcare-backend.onrender.com/vets/nearby?emergency_only=${filterEmergency}`, {
+        const res = await fetch(`https://pawcare-backend-kpao.onrender.com/vets/nearby?emergency_only=${filterEmergency}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         if (res.ok) {

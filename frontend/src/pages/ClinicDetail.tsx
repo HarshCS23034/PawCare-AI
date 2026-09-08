@@ -13,7 +13,7 @@ export default function ClinicDetail() {
     const fetchClinic = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await fetch(`https://pawcare-backend.onrender.com/vets/${id}`, {
+        const res = await fetch(`https://pawcare-backend-kpao.onrender.com/vets/${id}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         if (res.ok) {

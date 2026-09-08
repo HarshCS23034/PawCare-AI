@@ -35,7 +35,7 @@ export default function Chat() {
   const createSession = async (petId: number) => {
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('https://pawcare-backend.onrender.com/chat/session', {
+      const res = await fetch('https://pawcare-backend-kpao.onrender.com/chat/session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
         body: JSON.stringify({ pet_id: petId })
@@ -60,7 +60,7 @@ export default function Chat() {
 
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('https://pawcare-backend.onrender.com/chat/message', {
+      const res = await fetch('https://pawcare-backend-kpao.onrender.com/chat/message', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
         body: JSON.stringify({ session_id: sessionId, content })

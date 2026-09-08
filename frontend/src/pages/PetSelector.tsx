@@ -18,7 +18,7 @@ export default function PetSelector() {
           navigate('/signin');
           return;
         }
-        const res = await fetch('https://pawcare-backend.onrender.com/pets/', {
+        const res = await fetch('https://pawcare-backend-kpao.onrender.com/pets/', {
           headers: { Authorization: `Bearer ${token}` }
         });
         if (res.ok) {

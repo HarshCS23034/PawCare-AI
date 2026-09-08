@@ -27,8 +27,8 @@ export default function BookAppointment() {
       try {
         const token = localStorage.getItem('token');
         const [clinicRes, petsRes] = await Promise.all([
-          fetch(`https://pawcare-backend.onrender.com/vets/${clinicId}`, { headers: { Authorization: `Bearer ${token}` } }),
-          fetch('https://pawcare-backend.onrender.com/pets/', { headers: { Authorization: `Bearer ${token}` } })
+          fetch(`https://pawcare-backend-kpao.onrender.com/vets/${clinicId}`, { headers: { Authorization: `Bearer ${token}` } }),
+          fetch('https://pawcare-backend-kpao.onrender.com/pets/', { headers: { Authorization: `Bearer ${token}` } })
         ]);
         
         if (clinicRes.ok && petsRes.ok) {
@@ -54,7 +54,7 @@ export default function BookAppointment() {
       const fetchSlots = async () => {
         setSlotsLoading(true);
         try {
-          const res = await fetch(`https://pawcare-backend.onrender.com/appointments/slots?clinic_id=${clinicId}&date=${bookingData.date}`);
+          const res = await fetch(`https://pawcare-backend-kpao.onrender.com/appointments/slots?clinic_id=${clinicId}&date=${bookingData.date}`);
           if (res.ok) {
             const data = await res.json();
             setAvailableSlots(data.slots);
@@ -84,7 +84,7 @@ export default function BookAppointment() {
         scheduled_at: combinedDateTime
       };
 
-      const res = await fetch('https://pawcare-backend.onrender.com/appointments/', {
+      const res = await fetch('https://pawcare-backend-kpao.onrender.com/appointments/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
         body: JSON.stringify(payload)
